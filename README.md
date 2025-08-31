@@ -45,7 +45,7 @@ A comprehensive desktop application designed for key workers to manage service u
 
 ## Screenshots
 
-![Login page screenshot](https://github.com/username/repo/blob/main/images/login.png?raw=true)
+![Login page screenshot] | (https://github.com/DenQuizon/Key_Worker_Record_App/blob/main/KeyWorkerApp/images/Login_Page.png)
 
 ## Installation
 
