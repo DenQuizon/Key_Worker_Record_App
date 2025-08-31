@@ -1,0 +1,79 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build AlysonHouseApp Executable",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"-m",
+				"PyInstaller",
+				"--onefile",
+				"--windowed",
+				"--name",
+				"AlysonHouseApp",
+				"--icon=app_icon.ico",
+				"--add-data",
+				"alyson_house.db;.",
+				"--distpath",
+				"C:\\Users\\Home Admin\\Dropbox\\PC\\Desktop\\AlysonHouseAppDist",
+				"--workpath",
+				"build",
+				"--noconfirm",
+				"main.py"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build Executable Fixed",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"-m",
+				"PyInstaller",
+				"--onefile",
+				"--windowed",
+				"--name=AlysonHouseApp",
+				"--icon=app_icon.ico",
+				"--add-data=alyson_house.db;.",
+				"--distpath=C:\\Users\\Home Admin\\Dropbox\\PC\\Desktop\\AlysonHouseAppDist",
+				"--workpath=build",
+				"--noconfirm",
+				"main.py"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build Using Spec File",
+			"type": "shell",
+			"command": "python -m PyInstaller",
+			"args": [
+				"AlysonHouseApp.spec"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Simple Build Script",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"simple_build.py"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build with Retry Logic",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"simple_build.py"
+			],
+			"isBackground": false,
+			"group": "build"
+		}
+	]
+}
