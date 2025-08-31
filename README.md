@@ -1,5 +1,4 @@
 # Alyson House Key Worker App
-
 A comprehensive desktop application designed for key workers to manage service user records, track health assessments, and generate reports. This application is specifically built for care facilities to streamline documentation and improve care management workflows.
 
 ## Features
@@ -43,9 +42,7 @@ A comprehensive desktop application designed for key workers to manage service u
 
 ## Screenshots
 
-## Screenshots
-
-![Login page screenshot] | (https://github.com/DenQuizon/Key_Worker_Record_App/blob/main/KeyWorkerApp/images/Login_Page.png=true)
+![Login page screenshot](https://github.com/DenQuizon/Key_Worker_Record_App/blob/main/KeyWorkerApp/images/Login_Page.png)
 
 ## Installation
 
@@ -84,15 +81,17 @@ Or use the provided VS Code tasks for building.
 ## Usage
 
 ### First Time Setup
+
 1. Launch the application
 2. Login with the default supervisor account:
-   - Username: `supervisor`
-   - Password: `password`
+   - Username: supervisor
+   - Password: password
 3. Change the default password when prompted
 4. Add service users through the "Manage Service Users" option
 5. Create staff accounts through "Manage App Users" (supervisor only)
 
 ### Creating Monthly Forms
+
 1. Select a service user from the dropdown
 2. Choose the month and year
 3. Click "View / Create Form"
@@ -100,25 +99,29 @@ Or use the provided VS Code tasks for building.
 5. Save the form and generate PDF reports as needed
 
 ### User Roles
+
 - **Staff**: Can view/create forms, manage service users
 - **Supervisor**: Full access including user management and activity logs
 
 ## Technical Details
 
 ### Technology Stack
+
 - **Frontend**: CustomTkinter (Modern UI library)
 - **Database**: SQLite3
 - **PDF Generation**: ReportLab
 - **Additional Libraries**: PIL/Pillow, pandas, python-docx
 
 ### Database Schema
-- `users`: Application user accounts and roles
-- `service_users`: Care recipients information
-- `forms`: Monthly assessment forms
-- `appointments`: Appointment tracking
-- `activity_log`: System activity audit trail
+
+- **users**: Application user accounts and roles
+- **service_users**: Care recipients information
+- **forms**: Monthly assessment forms
+- **appointments**: Appointment tracking
+- **activity_log**: System activity audit trail
 
 ### File Structure
+
 ```
 KeyWorkerApp/
 ├── main.py                          # Main application entry point
@@ -139,29 +142,36 @@ KeyWorkerApp/
 ## Configuration
 
 ### Database
-The application uses SQLite database (`alyson_house.db`) which is automatically created and initialized on first run.
+
+The application uses SQLite database (alyson_house.db) which is automatically created and initialized on first run.
 
 ### Default Credentials
+
 - **Username**: supervisor
 - **Password**: password (must be changed on first login)
 
 ## Development
 
 ### Running in Development Mode
+
 ```bash
 python main.py
 ```
 
 ### Database Management
+
 Utility scripts are provided for database operations:
-- `check_users.py` - View current users
-- `reset_supervisor_password.py` - Reset supervisor password
-- `database_utils.py` - Database helper functions
+
+- **check_users.py** - View current users
+- **reset_supervisor_password.py** - Reset supervisor password
+- **database_utils.py** - Database helper functions
 
 ### Building Distribution
+
 Use the provided build scripts:
-- `simple_build.py` - Simple build script
-- `AlysonHouseApp.spec` - PyInstaller specification file
+
+- **simple_build.py** - Simple build script
+- **AlysonHouseApp.spec** - PyInstaller specification file
 
 ## Security Features
 
@@ -173,7 +183,8 @@ Use the provided build scripts:
 
 ## Requirements
 
-See `requirements.txt` for complete dependency list. Key dependencies include:
+See requirements.txt for complete dependency list. Key dependencies include:
+
 - customtkinter >= 5.2.2
 - CTkMessagebox >= 2.7
 - reportlab >= 4.4.2
@@ -188,6 +199,7 @@ This project is designed for care facility management. Please ensure compliance 
 ## Support
 
 For issues, feature requests, or questions:
+
 1. Check the existing issues in this repository
 2. Create a new issue with detailed description
 3. Include steps to reproduce any bugs
@@ -200,7 +212,4 @@ For issues, feature requests, or questions:
 4. Test thoroughly
 5. Submit a pull request with detailed description
 
----
-
 **Note**: This application handles sensitive personal and health information. Ensure proper data protection measures are in place when deploying in production environments.
-
